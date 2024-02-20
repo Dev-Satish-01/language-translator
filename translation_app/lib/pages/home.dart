@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:translation_app/pages/page%202.dart';
 
 class Splash extends StatefulWidget {
   const Splash({super.key});
@@ -16,7 +15,7 @@ class _SplashState extends State<Splash> {
   }
 
   _navigatetohome()async{
-    await Future.delayed(Duration(milliseconds: 2500),(){});
+    await Future.delayed(const Duration(milliseconds: 2500),(){});
     Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> page()));
   }
 
@@ -30,7 +29,7 @@ class _SplashState extends State<Splash> {
           children: [
             Container(height: 100, width :100, color: Colors.blue,),
             Container(
-              child: Text('TRANSLATEHUB', style: TextStyle(
+              child: const Text('TRANSLATEHUB', style: TextStyle(
                 fontSize:24,
                 fontWeight: FontWeight.bold,
               ) ,)

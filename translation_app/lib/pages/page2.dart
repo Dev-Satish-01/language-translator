@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class page extends StatefulWidget {
+  const page({super.key});
+
   @override
   State<page> createState() => _State();
 }
@@ -10,14 +12,14 @@ class _State extends State<page> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: const Text ('TRANSLATION APP'),
+        title: const Center(child: Text ('TRANSLATION APP'),
 
         ),
       ),
 
       body:
 
-      Center(child: Container(
+      Center(child: SizedBox(
           width: 200,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -29,17 +31,17 @@ class _State extends State<page> {
                       hintText: 'ENTER TEXT',
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(21),
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Colors.deepPurple
                         ),
                       ),
-                    prefixIcon: Icon(Icons.abc_rounded, color: Colors.black,)
+                    prefixIcon: const Icon(Icons.abc_rounded, color: Colors.black,)
                     ),
                     onChanged: (text) async{
                       const apiKey = '589737d0c2mshd5724a7cf3ed992p12857bjsn20e22a13855b';
                       const to = 'es';
                       final url = Uri.parse('https://rapidapi.com/googlecloud/api/google-translate1');
-                      final response =  await 'http.post(url)';
+                      const response =  'http.post(url)';
                       final translation = await text.translate(await Text.translate
                       from: 'auto',
                       to :'es'
@@ -53,8 +55,8 @@ class _State extends State<page> {
 
                   ),
                   const Divider(height: 32,),
-                  Text('translated',
-                        style: const TextStyle(
+                  const Text('translated',
+                        style: TextStyle(
                         fontSize: 36,
                         color: Colors.indigoAccent
 
